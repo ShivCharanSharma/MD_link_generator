@@ -6,7 +6,7 @@ import click
 import math
 
 @click.command()
-@click.option('--level','-l',default=math.inf,help='specify levels of  searching in sub directories')
+@click.option('--level','-l',default=math.inf,type=int,help='specify levels of  searching in sub directories')
 @click.option('--bottom','-b',is_flag=True,help='Bottom up searching searching in sub directories. Default is Top to Bottom.')
 @click.option('--in-dir','-i',default='./',help='Enter path of input directory')
 def createCSV(in_dir,level,bottom):
